@@ -1,0 +1,280 @@
+/* ========== Media Queries ========== */
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ------------Section Title-------------- */
+@media (max-width: 450px) {
+  .section-title h2 {
+    font-size: 20px;
+  }
+  .section-title img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+}
+
+/* ------------Header Topbar------------- */
+@media (max-width: 450px) {
+  .topbar {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .topbar .d-flex {
+    gap: 1rem;
+  }
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+}
+
+/* -------------Header Navigation Bar------------- */
+@media (max-width: 480px) {
+  .mobile-sticky-bar-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-bar .left,
+  .top-bar .center,
+  .top-bar .right {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-menu-items {
+    display: none;
+  }
+}
+
+/* -------------Mobile Sticky Bootom Menu -----------------*/
+/* Show only on mobile */
+@media (max-width: 768px) {
+  #mobile-sticky-bottom-menu {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    z-index: 9999;
+  }
+
+  .mobile-bottom-ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .mobile-bottom-ul li {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mobile-bottom-ul a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 2.1;
+    transition: color 0.2s;
+  }
+
+  .mobile-bottom-ul a i {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+
+  .mobile-bottom-ul a.active,
+  .mobile-bottom-ul a:hover {
+    color: var(--primary-color);
+  }
+
+  /* 🔍 Search field styling */
+  .search-field {
+    display: none;
+    flex: 1;
+    padding: 5px 10px;
+  }
+
+  .search-field form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .search-field input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .search-field button {
+    background: none;
+    border: none;
+    margin-left: 8px;
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+  }
+}
+
+/* ------------Swipper Slider ----------------- */
+@media (max-width: 768px) {
+  .hero-swiper h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-swiper p {
+    font-size: 1rem;
+  }
+}
+
+/* --------------Categories Section ---------------- */
+/* Remove bottom margin on large screens */
+@media (max-width: 450px) {
+  .categories-section .single-category img {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .categories-section .single-category {
+    margin-bottom: 0;
+  }
+}
+
+/* ------------Footer Section-------------- */
+@media (max-width: 768px) {
+  .copy-right-text {
+    margin-bottom: 70px;
+  }
+  .copy-right-text .developer-text {
+    text-align: center !important;
+  }
+}
+@media (max-width: 450px) {
+  .subscriber-input input {
+    margin-bottom: 10px;
+  }
+  .subscriber-input input {
+    padding: 15px;
+  }
+  .subscriber-input .marco-btn {
+    padding: 5px 20px;
+  }
+}
+
+/* -------------Single Product Page Design -------------------- */
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .current-price {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-tabs .nav-link {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .tab-content {
+    padding: 20px 0;
+  }
+}
+
+/* ---------About Page Design ----------------- */
+@media (max-width: 767.98px) {
+  .experience-badge {
+    margin-top: 3rem !important;
+  }
+}
+
+/* ---------------Blog Page Style--------------- */
+@media screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .top-bar .left,
+  .top-bar .center,
+  .top-bar .right {
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav,
+  .nav-actions {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .blog-header {
+    padding: 60px 0;
+    margin-bottom: 40px;
+  }
+
+  .blog-card {
+    margin-bottom: 25px;
+  }
+}

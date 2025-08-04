@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* ========== Root Variables ========== */
+:root {
+  /* --primary-color: #f97a00; */
+  --primary-color: #f9b233;
+  --secondary-color: #181818;
+  --text-color: #2c2c2c;
+  --heading-text-color: #f97a00;
+  --para-text-color: #666;
+  --bg-color: #fff;
+  --dark-color: #2d3436; /* Blog page color*/
+  --light-color: #f9f9f9; /* Blog page color*/
+  --font-family: "Rubik", sans-serif;
+  --transition: all 0.3s ease;
+}
+
+/* ========== Reset & Base ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  max-width: 1920px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  /* background-color: #343a40; */
+  background: #051534;
+  color: white;
+  padding-top: 1rem;
+}
+.dropdown-menu-sidebar {
+  background-color: rgb(0, 8, 24);
+}
+.dropdown-menu-sidebar li {
+  border-bottom: 1px solid #474646;
+  padding-left: 0;
+}
+.dropdown-menu-sidebar li:last-child {
+  border-bottom: 0px solid transparent;
+  padding-left: 0;
+}
+.dropdown-menu-sidebar li a {
+  font-size: 15px;
+}
+
+.sidebar .nav-link {
+  color: #ffffffb3;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  color: white;
+  background-color: #495057;
+}
+
+.content {
+  margin-left: 250px;
+  /* padding: 2rem; */
+}
+.content-menu-bar {
+  padding: 15px;
+}
+.sidebar-menu-body-content {
+  padding: 2rem;
+}
+
+.dashboard-menu-bar {
+  min-height: 60px;
+  background-color: var(--heading-text-color);
+}
+
+.user-name {
+  font-size: 1rem;
+}
+
+.dropdown-toggle::after {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.dropdown-toggle i {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+.dropdown-toggle::after {
+  display: none;
+}

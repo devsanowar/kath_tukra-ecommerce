@@ -1,0 +1,231 @@
+:root {
+  --priamary: #4FB748;
+  --secondary: #f8f8f8;
+  --base: #333333;
+  --black: rgb(51, 51, 51);
+  --white: rgb(255, 255, 255);
+  --basebg: #064601;
+}
+
+
+a {
+color: var(--priamary);
+text-decoration: none;
+background-color: transparent;
+}
+
+
+.theme-red .navbar {
+background-color: var(--priamary) !important;
+}
+
+.navbar-header {
+background: #263238;
+}
+
+.theme-red .sidebar .user-info {
+background: var(--priamary) !important;
+}
+
+.sidebar .user-info .info-container .name {
+line-height: 50px;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show >
+.btn-primary.dropdown-toggle {
+color: #fff;
+background-color: var(--priamary) !important;
+border-color: var(--priamary);
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+background-color: var(--priamary) !important;
+}
+
+
+
+
+.sidebar .menu .list .menu-toggle:after {
+display: 'none';
+}
+.dropdown-menu ul.menu .menu-info {
+top: 7px !important;
+}
+
+.slimScrollDiv {
+height: auto !important;
+}
+ul.menu.list-unstyled.custom-profile-signout {
+height: auto !important;
+}
+
+
+.input-group .input-group-addon {
+padding-left: 10px;
+}
+
+.input-group .input-group-addon + .form-line {
+padding-left: 35px;
+}
+
+
+
+.form-group .form-control {
+padding-left: 10px;
+}
+
+
+.bootstrap-select.btn-group.show-tick > .btn {
+padding-left: 10px;
+color: var(--base);
+font-size: 17px;
+padding-bottom: 0;
+font-weight: 300;
+}
+
+.dropdown-toggle::after {
+display: inline-block;
+margin-left: .255em;
+vertical-align: .480em;
+content: "";
+border-top: .3em solid;
+border-right: .3em solid transparent;
+border-bottom: 0;
+border-left: .3em solid transparent;
+}
+
+
+
+.bootstrap-select > .dropdown-toggle.bs-placeholder, .bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
+.bootstrap-select > .dropdown-toggle.bs-placeholder:focus, .bootstrap-select > .dropdown-toggle.bs-placeholder:active {
+color: var(--base);
+}
+
+.form-group .form-line.access_info {
+border: 1px solid var(--base) !important;
+padding-left: 10px;
+}
+.btn.btn-primary.btn-lg.custom_btn {
+padding: 10px 15px;
+}
+
+.bootstrap-select.btn-group.show-tick > .btn {
+width: 100%;
+}
+
+
+
+
+.btn:not(.btn-link):not(.btn-circle) i {
+font-size: 16px;
+}
+
+
+.menu-info-custom {
+position: relative;
+top: 8% !important;
+}
+
+.menu-info-custom h4{
+font-size: 16px;
+}
+.order-count {
+	background: var(--priamary) !important;
+	color: #fff !important;
+	border-radius: 50px;
+	font-size: 11px;
+	margin-left: 6px !important;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	line-height: 20px;
+	margin: auto;
+	justify-content: center;
+	display: inline-flex;
+}
+.g-bg-cyan {
+	background: var(--priamary) !important;
+}
+
+.page-item.active .page-link {
+	z-index: 3;
+	color: #fff !important;
+	background-color: var(--priamary) !important;
+	border-color: var(--priamary) !important;
+}
+
+.page-link {
+	color: var(--priamary) !important;
+}
+
+.sidebar .menu .list a ::before {
+	color: var(--priamary) !important;
+}
+
+    .dashboard-icons i {
+        border: 1px solid var(--priamary);
+        padding: 6px;
+        border-radius: 10%;
+        background: var(--priamary);
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .dashboard-icons i:hover {
+        color: var(--priamary);
+        background: var(--secondary);
+        border-color: var(--secondary);
+    }
+
+    /* Active btn style */
+    .filter-btn.active {
+        background-color: #4FB748 !important; /* অরেঞ্জ কালার */
+        border-color: #4FB748 !important;
+        color: #fff !important;
+    }
+
+    .theme-red .sidebar .menu .list .toggled, .theme-red .sidebar .menu .list .ml-menu {
+	border-color: var(--priamary) !important;
+}
+
+
+.input-group .form-line + .input-group-addon {
+	right: 10px;
+}
+
+.input-group .form-line + .input-group-addon {
+	padding-right: 12px !important;
+	top: 4px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	border-left: 1px solid #d5d5d5;
+	background: #dddddd5e !important;
+	padding-left: 10px !important;
+	right: 5px !important;
+}
+
+
+blockquote {
+	border-left: 5px solid var(--priamary) !important;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+}
+
+p span .sms {
+	border: 1px solid transparent;
+	width: 40px;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 .2rem var(--secondary);
+}
+
+
+.switch label input[type="checkbox"]:checked + .lever {
+	background-color: var(--priamary) !important;
+}
+.switch label input[type="checkbox"]:checked + .lever::after {
+	background-color: var(--priamary) !important;
+	left: 24px;
+}
