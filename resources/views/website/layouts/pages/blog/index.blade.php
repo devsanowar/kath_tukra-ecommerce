@@ -11,9 +11,9 @@
                         @foreach ($posts as $item)
                             <div class="col-md-6 mb-4 animate__animated animate__fadeInUp" data-wow-delay="0.1s">
                                 <div class="blog-card h-100">
-                                    {{-- <img src="{{ asset($item->image) }}" class="blog-card-img w-100" alt="Blog Image"> --}}
-                                    <img src="{{ asset('frontend/assets/images/w11.jpg') }}" class="blog-card-img w-100"
-                                        alt="Blog Image">
+                                    <img src="{{ asset($item->image) }}" class="blog-card-img w-100" alt="Blog Image">
+                                    {{-- <img src="{{ asset('frontend/assets/images/w11.jpg') }}" class="blog-card-img w-100"
+                                        alt="Blog Image"> --}}
                                     <div class="blog-card-body">
                                         <span
                                             class="blog-category">{{ $item->category->category_name ?? 'Uncategorized' }}</span>

@@ -13,9 +13,9 @@
                             <a href="{{ $banner->button_url }}" class="marco-btn mt-3">{{ $banner->button_name }}</a>
                         </div>
                         <div class="col-md-6 text-end">
-                            {{-- <img src="{{ asset($banner->image) }}" alt="Fashion Product" class="img-fluid" /> --}}
-                            <img src="{{ asset('frontend/assets/images/wood-2.png') }}" style="margin-left: 200px"
-                                class="img-fluid" alt="Wood">
+                            <img src="{{ asset($banner->image) }}" alt="Fashion Product" class="img-fluid" />
+                            {{-- <img src="{{ asset('frontend/assets/images/wood-2.png') }}" style="margin-left: 200px"
+                                class="img-fluid" alt="Wood"> --}}
                         </div>
                     </div>
                 </div>

@@ -69,8 +69,8 @@
                     <span>By Admin</span>
                     <span><i class="bi bi-chat"></i> 10 Comments</span>
                 </div>
-                {{-- <img src="{{ asset($blog->image) }}" class="img-fluid mb-4" alt="blog main image"> --}}
-                <img src="{{ asset('frontend/assets/images/w10.jpg') }}" class="img-fluid mb-4 w-100" alt="Blog Image">
+                <img src="{{ asset($blog->image) }}" class="img-fluid mb-4" alt="blog main image">
+                {{-- <img src="{{ asset('frontend/assets/images/w10.jpg') }}" class="img-fluid mb-4 w-100" alt="Blog Image"> --}}
                 <div class="blog-content" style="text-align: justify">
                     <p>
                         {!! $blog->post_content !!}

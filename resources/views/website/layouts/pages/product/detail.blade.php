@@ -19,24 +19,24 @@
                         <!-- Main Product Image -->
                         <div class="bg-white p-4 rounded shadow-sm mb-3"
                             style="height: 400px; display: flex; align-items: center; justify-content: center;">
-                            {{-- <img id="mainProductImage" src="{{ asset($product->thumbnail) }}"
+                            <img id="mainProductImage" src="{{ asset($product->thumbnail) }}"
                                  alt="Samsung Galaxy Z Fold3 5G" class="img-fluid"
-                                 style="max-height: 100%; object-fit: contain; cursor: zoom-in;"> --}}
-                            <img src="{{ asset('frontend/assets/images/wood-3.png') }}" alt="Samsung Galaxy Z Fold3 5G"
+                                 style="max-height: 100%; object-fit: contain; cursor: zoom-in;">
+                            {{-- <img src="{{ asset('frontend/assets/images/wood-3.png') }}" alt="Samsung Galaxy Z Fold3 5G"
                                 class="img-fluid" style="max-height: 100%; object-fit: contain; cursor: zoom-in;"
-                                alt="Wood Image">
+                                alt="Wood Image"> --}}
                         </div>
 
                         <!-- Thumbnail Gallery -->
                         <div class="thumbnail-gallery d-flex justify-content-start gap-2">
                             <div class="thumbnail-item border p-2 rounded"
                                 style="width: 80px; height: 80px; cursor: pointer;">
-                                {{-- <img src="{{ asset($product->thumbnail) }}" alt="Thumbnail 1"
-                                    class="img-fluid h-100 w-100 object-fit-cover"
-                                    onclick="changeMainImage('{{ asset($product->thumbnail) }}')"> --}}
-                                <img src="{{ asset('frontend/assets/images/wood-3.png') }}"
+                                <img src="{{ asset($product->thumbnail) }}" alt="Thumbnail 1"
                                     class="img-fluid h-100 w-100 object-fit-cover"
                                     onclick="changeMainImage('{{ asset($product->thumbnail) }}')">
+                                {{-- <img src="{{ asset('frontend/assets/images/wood-3.png') }}"
+                                    class="img-fluid h-100 w-100 object-fit-cover"
+                                    onclick="changeMainImage('{{ asset($product->thumbnail) }}')"> --}}
                             </div>
                         </div>
                     </div>
@@ -253,21 +253,27 @@
     <!-- ======= MAIN CONTENT END ======= -->
 @endsection
 
-<script>
+@push('scripts')
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.quantity-selector').forEach(function(container) {
-            const input = container.querySelector('.quantity-input');
-            const plusBtn = container.querySelector('.plus');
-            const minusBtn = container.querySelector('.minus');
+    document.querySelectorAll('.quantity-selector').forEach(function(container) {
+        const input = container.querySelector('.quantity-input');
+        const plusBtn = container.querySelector('.plus');
+        const minusBtn = container.querySelector('.minus');
 
-            plusBtn.addEventListener('click', () => {
-                input.value = parseInt(input.value || 1) + 1;
-            });
+        plusBtn.addEventListener('click', () => {
+            let current = Number(input.value.trim()) || 1;
+            input.value = current + 1;
+        });
 
-            minusBtn.addEventListener('click', () => {
-                const current = parseInt(input.value || 1);
-                if (current > 1) input.value = current - 1;
-            });
+        minusBtn.addEventListener('click', () => {
+            let current = Number(input.value.trim()) || 1;
+            if (current > 1) input.value = current - 1;
         });
     });
+});
+
 </script>
+@endpush
+
+

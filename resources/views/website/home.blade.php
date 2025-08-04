@@ -71,74 +71,6 @@
                 </div>
                 <div class="all-categories-row">
                     <div class="row">
-                        <!-- Category 1 -->
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item" data-name="furniture">
-                            <div class="single-category text-center">
-                                <a href="/shop?category=furniture">
-                                    <img src="{{ asset('frontend/assets/images/wood-2.png') }}" class="img-fluid"
-                                        alt="Furniture">
-                                </a>
-                                <h4><a href="/shop?category=furniture">Furniture</a></h4>
-                            </div>
-                        </div>
-
-                        <!-- Category 2 -->
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item" data-name="timber">
-                            <div class="single-category text-center">
-                                <a href="/shop?category=timber">
-                                    <img src="{{ asset('frontend/assets/images/wood-3.png') }}" class="img-fluid"
-                                        alt="Timber">
-                                </a>
-                                <h4><a href="/shop?category=timber">Timber</a></h4>
-                            </div>
-                        </div>
-
-                        <!-- Category 3 -->
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item" data-name="plywood">
-                            <div class="single-category text-center">
-                                <a href="/shop?category=plywood">
-                                    <img src="{{ asset('frontend/assets/images/wood-4.png') }}" class="img-fluid"
-                                        alt="Plywood">
-                                </a>
-                                <h4><a href="/shop?category=plywood">Plywood</a></h4>
-                            </div>
-                        </div>
-
-                        <!-- Category 4 -->
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item" data-name="doors">
-                            <div class="single-category text-center">
-                                <a href="/shop?category=doors">
-                                    <img src="{{ asset('frontend/assets/images/wood-3.png') }}" class="img-fluid"
-                                        alt="Doors">
-                                </a>
-                                <h4><a href="/shop?category=doors">Doors</a></h4>
-                            </div>
-                        </div>
-
-                        <!-- Category 5 -->
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item" data-name="flooring">
-                            <div class="single-category text-center">
-                                <a href="/shop?category=flooring">
-                                    <img src="{{ asset('frontend/assets/images/wood-2.png') }}" class="img-fluid"
-                                        alt="Flooring">
-                                </a>
-                                <h4><a href="/shop?category=flooring">Flooring</a></h4>
-                            </div>
-                        </div>
-
-                        <!-- Category 6 -->
-                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item" data-name="decor">
-                            <div class="single-category text-center">
-                                <a href="/shop?category=decor">
-                                    <img src="{{ asset('frontend/assets/images/wood-4.png') }}" class="img-fluid"
-                                        alt="Decor Items">
-                                </a>
-                                <h4><a href="/shop?category=decor">Decor Items</a></h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{-- <div class="row">
                         @foreach ($categories as $category)
                             <!-- single wood category -->
                             <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item"
@@ -154,37 +86,11 @@
                                 </div>
                             </div>
                         @endforeach
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </section>
 
-        {{-- <section class="categories-section" id="contentArea">
-            <div class="container">
-                <div class="section-title">
-                    <h2> <span><img src="{{ 'frontend' }}/assets/images/shoes/running-shoe.png" class="img-fluid" width="50px" height="50px"
-                                    alt=""></span>
-                        Shoes <span class="section-span-text text-secondary">Categories</span>
-                        <span><img src="{{ 'frontend' }}/assets/images/shoes/rotated-running-shoe.png.png" class="img-fluid" width="50px"
-                                   height="50px" alt=""></span>
-                    </h2>
-                </div>
-                <div class="all-categories-row">
-                    <div class="row">
-                        @foreach ($categories as $category)
-                            <!-- single colum category -->
-                                <div class="col-6 col-sm-4 col-md-3 col-lg-2 filter-item" data-name="{{ strtolower($category->category_name) }}">
-                                    <div class="single-category">
-                                        <a href="{{ url('/shop?category=' . $category->id) }}"><img src="{{ $category->image }}" class="img-fluid" alt="category_1_img"></a>
-                                        <h4><a href="{{ url('/shop?category=' . $category->id) }}">{{ $category->category_name }}</a></h4>
-                                    </div>
-                                </div>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
-        </section> --}}
 
         <!------Quality Product Section Start ------>
         <section class="quality-product-section">
@@ -214,10 +120,10 @@
                                     style="width: 40px; height: 40px; font-size: 14px;">
                                     {{ $product->sizes }}
                                 </span>
-                                {{-- <img src="{{ $product->thumbnail }}" class="card-img-top product-img"
-                                    alt="Men's Running Shoes" /> --}}
-                                <img src="{{ asset('frontend/assets/images/w10.jpg') }}" class="img-fluid"
-                                    alt="Wood">
+                                <img src="{{ $product->thumbnail }}" class="card-img-top product-img"
+                                    alt="Men's Running Shoes" />
+                                {{-- <img src="{{ asset('frontend/assets/images/w10.jpg') }}" class="img-fluid"
+                                    alt="Wood"> --}}
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="product-name">
                                         <a href="{{ route('product-detail', $product->id) }}">
@@ -274,10 +180,10 @@
                         <div class="featured-logo-wrapper overflow-hidden">
                             <div class="featured-logo-track d-flex" id="logoTrack">
                                 @foreach ($brands as $brand)
-                                    {{-- <img src="{{ $brand->image }}" class="img-fluid logo-item" alt=""
-                                        height="100" width="200" /> --}}
-                                    <img src="{{ asset('frontend/assets/images/wood-2.png') }}"
-                                        class="img-fluid logo-item" alt="" height="100" width="200" />
+                                    <img src="{{ $brand->image }}" class="img-fluid logo-item" alt=""
+                                        height="100" width="200" />
+                                    {{-- <img src="{{ asset('frontend/assets/images/wood-2.png') }}"
+                                        class="img-fluid logo-item" alt="" height="100" width="200" /> --}}
                                 @endforeach
                             </div>
                         </div>

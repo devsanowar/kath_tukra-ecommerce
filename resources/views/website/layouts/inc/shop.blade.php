@@ -21,20 +21,20 @@
 
                 <hr>
 
-                {{--                <div class="filter-title">Filter by Size</div> --}}
+                {{-- <div class="filter-title">Filter by Size</div>
 
-                {{--                @php --}}
-                {{--                    $uniqueSizes = collect($products)->pluck('sizes')->filter()->unique(); --}}
-                {{--                @endphp --}}
+                @php
+                    $uniqueSizes = collect($products)->pluck('sizes')->filter()->unique();
+                @endphp
 
-                {{--                @foreach ($uniqueSizes as $index => $size) --}}
-                {{--                    <div class="form-check"> --}}
-                {{--                        <input class="form-check-input" type="radio" name="size" id="size{{ $index }}" value="{{ $size }}"> --}}
-                {{--                        <label class="form-check-label" for="size{{ $index }}">{{ $size }}</label> --}}
-                {{--                    </div> --}}
-                {{--                @endforeach --}}
-
-                {{--                <hr> --}}
+                @foreach ($uniqueSizes as $index => $size)
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="size" id="size{{ $index }}"
+                            value="{{ $size }}">
+                        <label class="form-check-label" for="size{{ $index }}">{{ $size }}</label>
+                    </div>
+                @endforeach
+                <hr> --}}
 
                 <form method="GET" action="{{ route('shop') }}" id="brandFilterForm">
                     <div class="filter-title">Filter by Brands</div>
@@ -68,9 +68,9 @@
                                 {{ $product->sizes }}
                             </span>
 
-                            {{-- <img src="{{ $product->thumbnail }}" class="card-img-top product-img"
-                                     alt="Men's Running Shoes" /> --}}
-                            <img src="{{ asset('frontend/assets/images/wood.jpg') }}" class="img-fluid" alt="Wood">
+                            <img src="{{ $product->thumbnail }}" class="card-img-top product-img"
+                                     alt="Men's Running Shoes" />
+                            {{-- <img src="{{ asset('frontend/assets/images/wood.jpg') }}" class="img-fluid" alt="Wood"> --}}
 
                             <div class="card-body d-flex flex-column">
                                 <h5 class="product-name">
