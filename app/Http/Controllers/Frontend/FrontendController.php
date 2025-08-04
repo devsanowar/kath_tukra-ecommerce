@@ -14,17 +14,18 @@ use App\Models\Product;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Category;
+use App\Models\HomeAbout;
 use App\Models\WhyChoseUs;
 use App\Models\Achievement;
 use App\Models\Promobanner;
 use App\Models\ProjectVideo;
+use App\Models\Returnrefund;
 use Illuminate\Http\Request;
+use App\Models\Privacypolicy;
+use App\Models\Termscondition;
 use App\Models\WebsiteSetting;
 use App\Models\WebsiteSocialIcon;
 use App\Http\Controllers\Controller;
-use App\Models\Privacypolicy;
-use App\Models\Returnrefund;
-use App\Models\Termscondition;
 
 class FrontendController extends Controller
 {
@@ -58,7 +59,9 @@ class FrontendController extends Controller
         $products = Product::latest()->get();
         $brands = Brand::latest()->get();
 
-        return view('website.home', compact(['banners', 'brands', 'products', 'achievements', 'reviews', 'about', 'featured_products', 'blogs', 'promobanners', 'social_icon', 'cta']));
+        $homeAbout = HomeAbout::first();
+
+        return view('website.home', compact(['banners', 'brands', 'products', 'achievements', 'reviews', 'about', 'featured_products', 'blogs', 'promobanners', 'social_icon', 'cta', 'homeAbout']));
     }
 
     public function shop(Request $request)

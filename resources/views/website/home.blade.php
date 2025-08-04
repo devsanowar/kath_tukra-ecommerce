@@ -15,37 +15,34 @@
                     <!-- Left Image (Person with tools) -->
                     <div class="col-lg-5 text-center text-lg-start">
                         {{-- <img src="your-worker-image.png" alt="Worker" class="img-fluid"> --}}
-                        <img src="{{ asset('frontend/assets/images/about/about-wood.png') }}" class="img-fluid"
+                        <img src="{{ asset($homeAbout->image_one ?? 'frontend/assets/images/about/about-wood.png') }}" class="img-fluid"
                             alt="Wood Icon">
                     </div>
 
                     <!-- Right Content -->
                     <div class="col-lg-7">
-                        <h3 class="section-title fw-bold mb-3 text-uppercase text-start">Over 15 Years Experience In Industry
+                        <h3 class="section-title fw-bold mb-3 text-uppercase text-start">{{ $homeAbout->title ?? 'Over 15 Years Experience In Industry' }}
                         </h3>
                         <p class="text-muted mb-4">
-                            Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndsse cursus mal suada
-                            faci lisis.
-                            Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec.
+                            {!! $homeAbout->description ?? 'Default description goes here.' !!}
                         </p>
 
                         <div class="row g-3">
                             <div class="col-md-7">
                                 <ul class="list-unstyled experience-list">
-                                    <li><i class="fas fa-check-circle text-warning me-2"></i>Interior Furniture
-                                        Manufacturing</li>
-                                    <li><i class="fas fa-check-circle text-warning me-2"></i>Repairing of wooden almerah
+                                    @php
+                                        $features = is_array($homeAbout->features) ? $homeAbout->features : json_decode($homeAbout->features ?? '[]', true);
+                                    @endphp
+                                    @foreach($features as $feature)
+                                    <li><i class="fas fa-check-circle text-warning me-2"></i>{{ $feature }}
                                     </li>
-                                    <li><i class="fas fa-check-circle text-warning me-2"></i>Hardwood Flooring</li>
-                                    <li><i class="fas fa-check-circle text-warning me-2"></i>Renovation of office furniture
-                                    </li>
-                                    <li><i class="fas fa-check-circle text-warning me-2"></i>Make Quality Products</li>
+                                    @endforeach
                                 </ul>
                             </div>
 
                             <div class="col-md-5">
                                 <div class="experience-thumb">
-                                    <img src="{{ asset('frontend/assets/images/wood-2.png') }}" class="img-fluid"
+                                    <img src="{{ asset($homeAbout->image_two ?? 'frontend/assets/images/wood-2.png') }}" class="img-fluid"
                                         alt="Wood Icon">
                                 </div>
                             </div>

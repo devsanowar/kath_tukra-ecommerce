@@ -126,7 +126,7 @@ Route::prefix('admin')
 
             // About
             Route::get('about', [HomeAboutController::class, 'index'])->name('home.about.index');
-            Route::post('about/update', [AboutController::class, 'update'])->name('home.about.update');
+            Route::post('about/update', [HomeAboutController::class, 'update'])->name('home.about.update');
 
             // Why chose us
             Route::resource('why-choose-us', WhyChoseUsController::class);
